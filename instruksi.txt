@@ -1,0 +1,14 @@
+- import database.sql ke server mariadb
+- copy folder source ke server apache/nginx
+- set root directory ke source/public
+- folder yang diberi akses write :
+  source/storage
+  source/bootstrap/cache
+  source/public/uploads
+- selain diatas lebih baik di beri akses read saja
+- buka dan edit source/.env :
+  isi/ganti nama_db
+  isi/ganti user_db
+  isi/ganti pass_db
+- pada terminal cd ke source kemudian ketik perintah berikut untuk inisialisasi:
+  php artisan optimize:clear
